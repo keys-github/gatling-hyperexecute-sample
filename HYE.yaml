@@ -1,0 +1,51 @@
+---
+version: 0.1
+runson: linux
+
+autosplit: true
+concurrency: 1
+scenarioCommandStatusOnly: true
+
+background:
+  - mvn spring-boot:run -Dspring-boot.run.main-class=dev.simonverhoeven.gatlingdemo.GatlingDemoApplication || true
+
+runtime:
+  - language: java
+    version: "17"
+
+uploadArtefacts:
+  - name: TestReport
+    path:
+      - target/gatling/**
+
+pre:
+  - mvn dependency:resolve
+
+vars:
+  INJECT_TYPE: constantUsersPerSec
+  WORKLOAD_MODEL: open
+  USERS: 10
+  DURATION: 30
+  RAMP_DURATION: 60
+  USERS_START: 5
+  USERS_END: 10
+
+testDiscovery:
+  type: raw
+  mode: static
+  command: echo "Test"
+
+testRunnerCommand: >
+  mvn gatling:test
+  -Dgatling.jvmArgs="-DinjectType=${INJECT_TYPE}
+  -DworkloadModel=${WORKLOAD_MODEL}
+  -Dusers=${USERS}
+  -Dduration=${DURATION}
+  -DrampDuration=${RAMP_DURATION}
+  -DusersStart=${USERS_START}
+  -DusersEnd=${USERS_END}"
+
+retryOnFailure: true
+maxRetries: 1
+
+jobLabel: [Performance, Gatling]
