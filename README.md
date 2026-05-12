@@ -1,6 +1,6 @@
-# Gatling Performance Testing on HyperExecute
+# Gatling Performance Testing on HyperExecute — TestMu AI (Formerly LambdaTest)
 
-Run Gatling load tests on [LambdaTest HyperExecute](https://www.lambdatest.com/hyperexecute) with configurable workload models, injection profiles, and automatic HTML report generation.
+Run Gatling load tests on [TestMu AI HyperExecute](https://www.testmuai.com/hyperexecute) with configurable workload models, injection profiles, and automatic HTML report generation.
 
 ## What This Repo Contains
 
@@ -14,8 +14,8 @@ Run Gatling load tests on [LambdaTest HyperExecute](https://www.lambdatest.com/h
 
 - Java 17+
 - Maven 3.6+
-- A [LambdaTest](https://www.lambdatest.com/) account with HyperExecute access
-- HyperExecute CLI binary ([download here](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
+- A [TestMu AI](https://www.testmuai.com/) account with HyperExecute access
+- HyperExecute CLI binary ([download here](https://www.testmuai.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
 - Environment variables set:
   ```bash
   export LT_USERNAME=<your-lambdatest-username>
@@ -162,7 +162,7 @@ git push
 
 ### 3. Run from HyperExecute UI
 
-1. Log in to [LambdaTest](https://accounts.lambdatest.com/login)
+1. Log in to [TestMu AI](https://accounts.lambdatest.com/login)
 2. From the left sidebar, go to **HyperExecute**
 3. Click **Run New Job**
 4. Select your **Git Repository** and branch
@@ -222,3 +222,22 @@ gatling-hyperexecute-sample/
 │       └── GreetingSimulation.java       # Gatling load test simulation
 └── target/gatling/                   # Generated reports (after test run)
 ```
+
+## 🚀 [LambdaTest is Now TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/)
+
+👋 Welcome to TestMu AI, the next evolution of LambdaTest. As of January 2026, LambdaTest has officially rebranded to TestMu AI. We have evolved from a cross-browser testing cloud into a unified, AI-native quality engineering platform designed for the modern DevOps era.
+
+Whether you have been part of the LambdaTest community for years or are just discovering TestMu AI, our mission remains the same: to help you ship faster with high-scale test execution, autonomous testing, and deep quality analytics.
+
+**🔄 Our Rebrand Journey**
+
+We chose the name TestMu AI to reflect our shift towards intelligent, autonomous testing. While our identity has changed, our core technology and commitment to the testing community stay the same.
+
+**✨ Specialties**
+
+- 🤖 AI-Native Test Execution (Formerly LambdaTest)
+- ⚡ Autonomous Test Automation
+- 🌐 Cross-Browser & Mobile Testing
+- 📊 Unified Quality Intelligence
+
+👉 Find [LambdaTest's New Home](https://www.testmuai.com/).
